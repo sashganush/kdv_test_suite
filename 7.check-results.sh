@@ -3,7 +3,6 @@ sleep 2
 
 curl http://whoami3.local/
 curl http://whoami4.local/
-curl http://stend01.local/
 
 curl http://stend01.local/site.php
 
