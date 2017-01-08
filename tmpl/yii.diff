@@ -1,0 +1,19 @@
+*** web.php	2017-01-08 16:53:38.250699852 +0700
+--- web.php.merge	2017-01-08 16:53:17.658666384 +0700
+***************
+*** 9,15 ****
+      'components' => [
+          'request' => [
+              // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+!             'cookieValidationKey' => '',
+          ],
+          'cache' => [
+              'class' => 'yii\caching\FileCache',
+--- 9,15 ----
+      'components' => [
+          'request' => [
+              // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+!             'cookieValidationKey' => 'FDHDKGHFKDHFDKHGFYFYDGY',
+          ],
+          'cache' => [
+              'class' => 'yii\caching\FileCache',

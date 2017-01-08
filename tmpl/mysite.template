@@ -1,0 +1,24 @@
+
+server {
+        server_name  ${VIRTUAL_HOST};
+        listen ${VIRTUAL_PORT};
+
+        access_log /home/nginx/logs/${VIRTUAL_HOST}.access.log  main;
+        error_log /home/nginx/logs/${VIRTUAL_HOST}.error.log  debug;
+
+        root  /home/nginx/htdocs;
+        index  index.php index.html index.htm;
+
+        ## php settings
+        location ~ \.php$ {
+                fastcgi_pass   ${VIRTUAL_HOST}-php:9000;
+                fastcgi_index  index.php;
+    		fastcgi_param SCRIPT_FILENAME ${DOLLAR}document_root${DOLLAR}fastcgi_script_name;
+	        fastcgi_param PATH_INFO ${DOLLAR}fastcgi_path_info;
+
+                include        fastcgi_params;
+        }
+
+
+
+}
